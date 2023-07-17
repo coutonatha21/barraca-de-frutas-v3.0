@@ -8,18 +8,16 @@ import ConfigBtn from './ConfigBtn'
 const FruitCards = (props) => {
 
     const {data, setData} = useContext(FruitsContext)
-    console.log(data)
 
     return (
-        data.map((fruit) => (
-            <div key={fruit.id} className="cards" >
-                <div className="fruit">
+        data.map((fruit, index) => (
+            <div className="cards" >
+                <div className="fruit" key={index}>
                     <span className="fruit-name">{fruit.nome}</span>
                     <img className="cash-icon" src={cashOutline} />
                     <span className="fruit-price">R${fruit.preco}</span> |
                     <span className="stock"> {fruit.estoque} em estoque</span>
-                    <ConfigBtn onClick={props.options} onPress={() => {setData(fruit)}}/>
-                    <p>{}</p>
+                    <ConfigBtn onClick={props.options} />
                 </div>
             </div>
         ))

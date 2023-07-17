@@ -5,10 +5,9 @@ import FruitCards from '../components/FruitCards'
 import SmallButton from '../components/SmallButton'
 import ModalOptions from '../components/ModalOptions'
 
-const FruitList = (props) => {
+const FruitList = () => {
 
   const [OptModal, setOptModal] = useState(false)
-  const [selectedFruit, setFruitSelected] = useState()
 
   return (
 
