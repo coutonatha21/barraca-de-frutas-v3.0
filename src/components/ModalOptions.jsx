@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ModalOptions = (props) => {
 
@@ -16,9 +16,9 @@ const ModalOptions = (props) => {
                     </div>
                 </div>
             </>
-        );
+        ) 
     }
-    return null;
-};
+    return null 
+} 
 
-export default ModalOptions;
+export default ModalOptions 

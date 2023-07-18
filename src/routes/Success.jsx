@@ -9,8 +9,8 @@ import LargeButton from '../components/LargeButton'
 
 const Success = () => {
 
-  const { successName, setSuccesName } = useContext(FruitsContext)
-  const nav = useNavigate();
+  const { successName, setSuccessName } = useContext(FruitsContext)
+  const nav = useNavigate() 
 
   return (
     <>

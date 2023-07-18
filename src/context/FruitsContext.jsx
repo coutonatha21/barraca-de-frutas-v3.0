@@ -10,7 +10,6 @@ export const FruitsProvider = ({ children }) => {
   const [stock, setStock] = useState(0)
   const [id, setId] = useState(0)
   const [data, setData] = useState([])
-  const [newData, setNewData] = useState([])
 
   const [successName, setSuccesName] = useState('')
 
@@ -22,7 +21,6 @@ export const FruitsProvider = ({ children }) => {
         price, setPrice,
         stock, setStock,
         data, setData,
-        newData, setNewData,
         successName, setSuccesName,
       }}>
       {children}

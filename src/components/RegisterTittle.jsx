@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 const RegisterTittle = (props) => {
 
-    const nav = useNavigate();
+    const nav = useNavigate() 
 
     function AddFruit() {
         return nav("/fruit-list")

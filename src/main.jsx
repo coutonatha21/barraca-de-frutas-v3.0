@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       }
     ],
   },
-]);
+])
 
 
 import { FruitsProvider } from './context/FruitsContext'
@@ -47,5 +47,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <FruitsProvider>
       <RouterProvider router={router} />
     </FruitsProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

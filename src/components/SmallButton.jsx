@@ -1,10 +1,11 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom' 
+
 import IoAddOutline from '../assets/IoAddOutline.svg'
 
 const SmallButton = () => {
 
-    const nav = useNavigate();
+    const nav = useNavigate() 
 
     return (
         <>

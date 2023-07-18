@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react' 
 
 const SearchBar = (props) => {
+  const [searchValue, setSearchValue] = useState('') 
+
   const handleChange = (event) => {
-    const { value } = event.target;
-    props.onChange(value);
-  };
+    const { value } = event.target 
+    setSearchValue(value) 
+    props.onChange(value) 
+  } 
 
   return (
     <>
@@ -15,10 +18,11 @@ const SearchBar = (props) => {
           className="search"
           type="text"
           placeholder="Pesquisar Fruta"
+          value={searchValue}
         />
       </form>
     </>
-  );
-};
+  ) 
+} 
 
-export default SearchBar;
+export default SearchBar 

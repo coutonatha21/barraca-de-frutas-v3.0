@@ -1,23 +1,23 @@
-import React, { useContext, useState } from 'react';
-import { FruitsContext } from '../context/FruitsContext';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useContext, useState } from 'react' 
+import { FruitsContext } from '../context/FruitsContext' 
+import { useLocation, useNavigate } from 'react-router-dom' 
 
-import RegisterCard from '../components/RegisterCard';
-import RegisterTittle from '../components/RegisterTittle';
-import LargeButton from '../components/LargeButton';
+import RegisterCard from '../components/RegisterCard' 
+import RegisterTittle from '../components/RegisterTittle' 
+import LargeButton from '../components/LargeButton' 
 
 const EditFruit = () => {
 
   const nav = useNavigate()
   
-  const location = useLocation();
-  const { fruit } = location.state;
+  const location = useLocation() 
+  const { fruit } = location.state 
 
-  const { data, setData } = useContext(FruitsContext);
+  const { data, setData } = useContext(FruitsContext) 
 
-  const [newName, setNewName] = useState(fruit.nome);
-  const [newPrice, setNewPrice] = useState(fruit.preco);
-  const [newStock, setNewStock] = useState(fruit.estoque);
+  const [newName, setNewName] = useState(fruit.nome) 
+  const [newPrice, setNewPrice] = useState(fruit.preco) 
+  const [newStock, setNewStock] = useState(fruit.estoque) 
 
   const handleUpdate = () => {
     const updatedFruit = {
@@ -25,13 +25,13 @@ const EditFruit = () => {
       nome: newName,
       preco: newPrice,
       estoque: newStock,
-    };
+    } 
     const updatedData = data.map((fruit) =>
       fruit.id === updatedFruit.id ? updatedFruit : fruit
-    );
-    setData(updatedData);
-    nav('/fruit-list');
-  };
+    ) 
+    setData(updatedData) 
+    nav('/fruit-list') 
+  } 
 
   return (
     <>
@@ -56,7 +56,7 @@ const EditFruit = () => {
       />
       <LargeButton ButtonTxt="Atualizar Fruta" onClick={handleUpdate} />
     </>
-  );
-};
+  ) 
+} 
 
-export default EditFruit;
+export default EditFruit 
