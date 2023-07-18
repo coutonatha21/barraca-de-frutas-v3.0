@@ -1,29 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react';
 
-import SearchBar from '../components/SearchBar'
-import FruitCards from '../components/FruitCards'
-import SmallButton from '../components/SmallButton'
-import ModalOptions from '../components/ModalOptions'
+import SearchBar from '../components/SearchBar';
+import FruitCards from '../components/FruitCards';
+import SmallButton from '../components/SmallButton';
+import ModalOptions from '../components/ModalOptions';
 
 const FruitList = () => {
-
-  const [OptModal, setOptModal] = useState(false)
-
   return (
-
     <>
       <SearchBar />
-
-      <section className='menu'>
-        <FruitCards
-          options={() => setOptModal(true)} />
+      <section className="menu">
+        <FruitCards />
         <SmallButton />
-        <ModalOptions
-          IsOpen={OptModal} />
+        <ModalOptions />
       </section>
     </>
-  )
+  );
+};
 
-}
-
-export default FruitList
+export default FruitList;

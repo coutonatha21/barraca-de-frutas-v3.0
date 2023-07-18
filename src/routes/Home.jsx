@@ -6,7 +6,6 @@ import LargeButton from '../components/LargeButton'
 const Home = () => {
 
   const nav = useNavigate();
-
   return (
     <>
       <div className="fruit-register">

@@ -1,28 +1,24 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
 
 const ModalOptions = (props) => {
 
-    const nav = useNavigate
-
-    (!props.isOpen)
-    if (props.IsOpen) {
+    if (props.isOpen) {
         return (
             <>
                 <div className="opt">
-                    <div className='opt-spans'>
-                        <div className='div-edit'>
-                        <span className='span-edit' onClick={() => {return nav("/edit")}}>Editar Fruta</span>
+                    <div className="opt-spans">
+                        <div className="div-edit">
+                            <span className="span-edit" onClick={() => props.onEdit(props.fruit)}>Editar Fruta</span>
                         </div>
-                        <div className='div-delete'>
-                        <span className='span-delete'>Excluir Fruta</span>
+                        <div className="div-delete">
+                            <span className="span-delete" onClick={() => props.onDelete(props.fruit)}>Excluir Fruta</span>
                         </div>
                     </div>
                 </div>
             </>
-        )
+        );
     }
-    return null
-}
+    return null;
+};
 
-export default ModalOptions
+export default ModalOptions;

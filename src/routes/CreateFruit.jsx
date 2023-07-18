@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
 import { FruitsContext } from '../context/FruitsContext'
 import uuid from 'react-uuid'
 
@@ -24,11 +23,10 @@ const CreateFruit = () => {
     if (name == "" || price == 0 || stock == 0) {
       alert("Preencha todos os campos para continuar!")
     } else {
-
       setData([...data, { nome: name, preco: price, estoque: stock, id: newId }])
       setSuccesName(name)
       setName(''), setPrice(0), setStock(0), setId(0)
-      return nav("/success")
+      nav("/success")
     }
   }
 

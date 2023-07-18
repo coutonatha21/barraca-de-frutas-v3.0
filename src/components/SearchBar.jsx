@@ -1,14 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-const SearchBar = () => {
-    return (
-        <>
-            <form className="search-bar" >
-                <input id="inputEntrada" 
-                    className="search" type="text" placeholder="Pesquisar Fruta" />
-            </form>
-        </>
-    )
-}
+const SearchBar = (props) => {
+  const handleChange = (event) => {
+    const { value } = event.target;
+    props.onChange(value);
+  };
 
-export default SearchBar
+  return (
+    <>
+      <form className="search-bar">
+        <input
+          onChange={handleChange}
+          id="inputEntrada"
+          className="search"
+          type="text"
+          placeholder="Pesquisar Fruta"
+        />
+      </form>
+    </>
+  );
+};
+
+export default SearchBar;

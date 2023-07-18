@@ -1,5 +1,4 @@
 import React from 'react'
-import '../App.css'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { FruitsContext } from '../context/FruitsContext'
@@ -7,8 +6,6 @@ import { FruitsContext } from '../context/FruitsContext'
 import IoClose from '../assets/IoClose.svg'
 import PhoneHand from '../assets/undraw_confirmed_re_sef7.svg'
 import LargeButton from '../components/LargeButton'
-
-import CreateFruit from './CreateFruit'
 
 const Success = () => {
 
