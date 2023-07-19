@@ -39,18 +39,21 @@ const EditFruit = () => {
       <RegisterCard
         PlaceHolderMsg="Nome da fruta"
         Icon="input-name"
+        type='text'
         newValue={newName}
         onChange={(event) => setNewName(event.target.value)}
       />
       <RegisterCard
         PlaceHolderMsg="Preço da fruta (Kg)"
         Icon="input-price"
+        type='number'
         newValue={newPrice}
         onChange={(event) => setNewPrice(event.target.value)}
       />
       <RegisterCard
         PlaceHolderMsg="Quantidade em estoque"
         Icon="input-stock"
+        type='number'
         newValue={newStock}
         onChange={(event) => setNewStock(event.target.value)}
       />

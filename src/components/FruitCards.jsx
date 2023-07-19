@@ -46,14 +46,6 @@ const FruitCards = ({ data }) => {
         setOptModal(false)
         setDelModal(false)
     }
-
-    const handleFilterChange = (value) => {
-        const filteredFruits = data.filter((fruit) =>
-            fruit.nome.toLowerCase().includes(value.toLowerCase())
-        )
-        setFilteredData(filteredFruits)
-    }
-
     return (
         <>
             {filteredData.map((fruit) => (

@@ -6,14 +6,14 @@ const RegisterTittle = (props) => {
 
     const nav = useNavigate() 
 
-    function AddFruit() {
+    function handleExit() {
         return nav("/fruit-list")
     }
     return (
         <>
             <div className='tit-page' >
                 <h1 className='tit-cad'>{props.tittle}</h1>
-                <img className='close-btn' onClick={AddFruit} src={IoClose} />
+                <img className='close-btn' onClick={handleExit} src={IoClose} />
             </div>
         </>
     )
